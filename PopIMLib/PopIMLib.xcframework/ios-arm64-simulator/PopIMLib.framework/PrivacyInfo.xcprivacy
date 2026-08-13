@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSPrivacyTracking</key>
+	<false/>
+	<key>NSPrivacyTrackingDomains</key>
+	<array/>
+	<key>NSPrivacyCollectedDataTypes</key>
+	<array/>
+	<key>NSPrivacyAccessedAPITypes</key>
+	<array>
+		<!-- UserDefaults 访问 -->
+		<dict>
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<!-- CA92.1: 访问由同一开发团队开发的应用程序或应用程序扩展之间共享的用户默认值 -->
+				<string>CA92.1</string>
+			</array>
+		</dict>
+		<!-- 文件时间戳访问 -->
+		<dict>
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryFileTimestamp</string>
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<!-- C617.1: 访问、修改或删除用户发起的文件（如读取或删除用户选择的文件） -->
+				<string>C617.1</string>
+				<!-- 0A2A.1: 访问日志文件和数据库文件以进行应用程序功能 -->
+				<string>0A2A.1</string>
+			</array>
+		</dict>
+		<!-- 系统启动时间访问 -->
+		<dict>
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategorySystemBootTime</string>
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<!-- 35F9.1: 测量应用程序内部的时间间隔，例如用于性能监控 -->
+				<string>35F9.1</string>
+			</array>
+		</dict>
+		<!-- 磁盘空间访问 -->
+		<dict>
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryDiskSpace</string>
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<!-- E174.1: 检查是否有足够的磁盘空间来执行用户请求的操作 -->
+				<string>E174.1</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
+

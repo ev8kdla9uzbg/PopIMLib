@@ -1,0 +1,115 @@
+name: Release to CocoaPods
+
+on:
+  repository_dispatch:
+    types: [release]
+
+jobs:
+  release:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 显示触发信息
+        run: |
+          echo "=========================================="
+          echo "版本号: ${{ github.event.client_payload.version }}"
+          echo "OSS URL: ${{ github.event.client_payload.oss_url }}"
+          echo "=========================================="
+
+      - name: 从 OSS 下载 xcframework
+        run: |
+          echo "下载 xcframework..."
+          echo "OSS URL: ${{ github.event.client_payload.oss_url }}"
+          curl -L -o PopIMLib.xcframework.zip "${{ github.event.client_payload.oss_url }}"
+          echo "文件大小: $(stat -f%z PopIMLib.xcframework.zip) bytes"
+          echo "文件类型检查:"
+          file PopIMLib.xcframework.zip
+          echo "文件头部内容:"
+          head -c 200 PopIMLib.xcframework.zip | od -A x -t x1 -v
+
+      - name: 更新仓库中的 xcframework
+        run: |
+          echo "解压并替换 xcframework..."
+          rm -rf PopIMLib/PopIMLib.xcframework
+          unzip -q PopIMLib.xcframework.zip -d PopIMLib/
+          echo "✅ xcframework 已更新"
+
+      - name: 更新 podspec 版本号
+        run: |
+          VERSION="${{ github.event.client_payload.version }}"
+          echo "更新 PopIMLib.podspec 版本号为 ${VERSION}..."
+          sed -i '' "s/s.version[[:space:]]*=.*/s.version      = \"${VERSION}\"                # 版本号（必填，需与后续 tag 一致）/" PopIMLib.podspec
+          echo "✅ 版本号已更新"
+
+      - name: 创建 GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ github.event.client_payload.version }}"
+          echo "创建 Release ${VERSION}..."
+
+          # 配置 git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 提交 xcframework 和 podspec 更新
+          git add PopIMLib/PopIMLib.xcframework PopIMLib.podspec
+          git commit -m "Update PopIMLib to version ${VERSION}" || echo "无需提交（版本号未变化）"
+          git push origin main || echo "推送失败或无需推送"
+
+          # 如果 Release 已存在，先删除 Release 和 tag
+          if gh release view "${VERSION}" --repo ev8kdla9uzbg/PopIMLib >/dev/null 2>&1; then
+            echo "Release ${VERSION} 已存在，删除 Release 和 tag..."
+            gh release delete "${VERSION}" --repo ev8kdla9uzbg/PopIMLib --yes
+            git push --delete origin "${VERSION}" 2>/dev/null || echo "远程 tag 已删除或不存在"
+            git tag -d "${VERSION}" 2>/dev/null || echo "本地 tag 已删除或不存在"
+          fi
+
+          # 创建 tag
+          git tag -a "${VERSION}" -m "Release ${VERSION}"
+          git push origin "${VERSION}"
+
+          # 生成 changelog
+          PREV_TAG=$(git tag --sort=-version:refname | grep -v "^${VERSION}$" | head -1)
+          if [ -z "$PREV_TAG" ]; then
+            CHANGELOG=$(git log --pretty=format:"- %s" ${VERSION})
+          else
+            CHANGELOG=$(git log --pretty=format:"- %s" ${PREV_TAG}..${VERSION})
+          fi
+
+          # 创建 Release
+          gh release create "${VERSION}" \
+            PopIMLib.xcframework.zip \
+            --title "PopIMLib ${VERSION}" \
+            --notes "${CHANGELOG}" \
+            --repo ev8kdla9uzbg/PopIMLib
+
+      - name: 设置 Ruby 环境
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler-cache: false
+
+      - name: 安装 CocoaPods
+        run: |
+          gem install cocoapods
+          pod --version
+
+      - name: 推送到 CocoaPods
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+        run: |
+          echo "推送到 CocoaPods..."
+          pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --verbose
+
+      - name: 完成
+        run: |
+          echo "=========================================="
+          echo "✅ 发布完成"
+          echo "版本: ${{ github.event.client_payload.version }}"
+          echo "=========================================="

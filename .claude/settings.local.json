@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pod trunk *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git tag *)",
+      "Bash(git push *)",
+      "Bash(grep *)",
+      "Bash(rm -f ~/.cocoapods/xcode_versions.yml)",
+      "Read(//Users/ong/Library/Caches/CocoaPods/**)",
+      "Read(//Users/ong/.cocoapods/**)",
+      "Bash(xcrun simctl *)",
+      "Read(//Users/ong/Library/Caches/**)",
+      "Read(//private/tmp/**)",
+      "Bash(rsync *)"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+framework module PopIMLib {
+  umbrella header "PopIMLib.h"
+  export *
+
+  module * { export * }
+}
+
+module PopIMLib.Swift {
+  header "PopIMLib-Swift.h"
+}
