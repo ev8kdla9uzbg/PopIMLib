@@ -24,7 +24,9 @@ jobs:
           VERSION="${{ github.event.client_payload.version }}"
           echo "版本号: ${VERSION}"
 
-          # 下载
+          # 下载（带重试）
+          curl -L -o PopIMLib.xcframework.zip "${{ github.event.client_payload.oss_url }}" || \
+          curl -L -o PopIMLib.xcframework.zip "${{ github.event.client_payload.oss_url }}" || \
           curl -L -o PopIMLib.xcframework.zip "${{ github.event.client_payload.oss_url }}"
 
           # 解压替换
