@@ -13,7 +13,12 @@
       "Bash(xcrun simctl *)",
       "Read(//Users/ong/Library/Caches/**)",
       "Read(//private/tmp/**)",
-      "Bash(rsync *)"
+      "Bash(rsync *)",
+      "Bash(python3 -c \"import sys, yaml; yaml.safe_load\\(sys.stdin\\)\")",
+      "Bash(gh run *)",
+      "Bash(git pull *)",
+      "Bash(curl -s \"https://trunk.cocoapods.org/api/v1/pods/PopIMLib\")",
+      "Bash(python3 -m json.tool)"
     ]
   }
 }
