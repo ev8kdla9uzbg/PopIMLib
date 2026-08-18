@@ -117,24 +117,6 @@ jobs:
 
           echo "✅ 网络配置完成"
 
-      - name: 运行诊断工具
-        continue-on-error: true
-        run: |
-          chmod +x .github/scripts/diagnose.rb
-          ruby .github/scripts/diagnose.rb
-
-      - name: 验证 podspec（带重试）
-        continue-on-error: true
-        uses: nick-invision/retry@v2
-        with:
-          timeout_minutes: 10
-          max_attempts: 2
-          retry_wait_seconds: 30
-          command: pod lib lint PopIMLib.podspec --allow-warnings --skip-import-validation --verbose --no-clean
-        env:
-          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: 设置脚本执行权限
         run: |
           chmod +x .github/scripts/push_to_cocoapods.sh
