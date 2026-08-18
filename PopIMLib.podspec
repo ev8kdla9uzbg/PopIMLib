@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   # 1. 基本信息
   s.name         = "PopIMLib"                # 组件名称（必填）
-  s.version      = "1.1.5.3"                # 版本号（必填，需与后续 tag 一致）
+  s.version      = "1.1.5.4"                # 版本号（必填，需与后续 tag 一致）
   s.summary      = "IM聊天"  # 简短描述（必填）
   s.description  = <<-DESC                # 详细描述（可选，需比 summary 长）
                    YCIMLibSDK是一套功能完备的即时通讯开发工具包，提供稳定高效的即时消息收发、会话管理、用户状态同步、推送集成等核心能力，支持 iOS 平台的 Swift 与 Objective-C 混编项目，帮助开发者快速构建具备即时通讯功能的应用
