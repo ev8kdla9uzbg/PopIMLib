@@ -104,12 +104,98 @@ jobs:
           gem install cocoapods
           pod --version
 
-      - name: 推送到 CocoaPods
+      - name: 配置网络和重试设置
+        run: |
+          echo "配置 Git HTTP 设置..."
+          git config --global http.postBuffer 524288000
+          git config --global http.lowSpeedLimit 0
+          git config --global http.lowSpeedTime 999999
+          git config --global http.version HTTP/1.1
+
+          echo "配置 GitHub token..."
+          git config --global github.token ${{ secrets.GITHUB_TOKEN }}
+
+          echo "✅ 网络配置完成"
+
+      - name: 运行诊断工具
+        continue-on-error: true
+        run: |
+          chmod +x .github/scripts/diagnose.rb
+          ruby .github/scripts/diagnose.rb
+
+      - name: 验证 podspec（带重试）
+        uses: nick-invision/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 3
+          retry_wait_seconds: 30
+          command: pod lib lint PopIMLib.podspec --allow-warnings --skip-import-validation --verbose
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 设置脚本执行权限
         run: |
-          echo "推送到 CocoaPods..."
-          pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --verbose
+          chmod +x .github/scripts/push_to_cocoapods.sh
+          chmod +x .github/scripts/push_to_cocoapods.rb
+
+      - name: 推送到 CocoaPods（方案1：使用 GitHub Action 重试）
+        id: push_with_action
+        continue-on-error: true
+        uses: nick-invision/retry@v2
+        with:
+          timeout_minutes: 20
+          max_attempts: 5
+          retry_wait_seconds: 120
+          retry_on: error
+          command: pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --verbose --synchronous
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUBY_HTTP_TIMEOUT: 600
+          COCOAPODS_TRUNK_TIMEOUT: 600
+
+      - name: 推送到 CocoaPods（方案2：使用 Ruby 脚本重试）
+        id: push_with_ruby_script
+        if: steps.push_with_action.outcome == 'failure'
+        continue-on-error: true
+        run: ruby .github/scripts/push_to_cocoapods.rb
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 推送到 CocoaPods（方案3：使用 Bash 脚本重试）
+        id: push_with_bash_script
+        if: steps.push_with_action.outcome == 'failure' && steps.push_with_ruby_script.outcome == 'failure'
+        run: bash .github/scripts/push_to_cocoapods.sh
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 检查推送结果
+        if: steps.push_with_action.outcome == 'failure' && steps.push_with_ruby_script.outcome == 'failure' && steps.push_with_bash_script.outcome == 'failure'
+        run: |
+          echo "=========================================="
+          echo "❌ 所有推送方案均失败"
+          echo "=========================================="
+          echo "请检查："
+          echo "1. GitHub API 状态: https://www.githubstatus.com"
+          echo "2. CocoaPods Trunk 状态: https://status.cocoapods.org"
+          echo "3. COCOAPODS_TRUNK_TOKEN 是否有效"
+          echo "=========================================="
+          exit 1
+
+      - name: 验证发布（带重试）
+        if: steps.push_with_action.outcome == 'success' || steps.push_with_ruby_script.outcome == 'success' || steps.push_with_bash_script.outcome == 'success'
+        uses: nick-invision/retry@v2
+        with:
+          timeout_minutes: 5
+          max_attempts: 3
+          retry_wait_seconds: 60
+          command: |
+            echo "等待 CocoaPods CDN 同步..."
+            sleep 60
+            pod search PopIMLib --simple | head -10
 
       - name: 完成
         run: |
