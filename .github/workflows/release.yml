@@ -11,7 +11,7 @@ permissions:
 jobs:
   release:
     runs-on: macos-latest
-    timeout-minutes: 60
+    timeout-minutes: 10
 
     steps:
       - name: Checkout code
@@ -19,67 +19,43 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 显示触发信息
-        run: |
-          echo "=========================================="
-          echo "版本号: ${{ github.event.client_payload.version }}"
-          echo "OSS URL: ${{ github.event.client_payload.oss_url }}"
-          echo "=========================================="
-
-      - name: 从 OSS 下载 xcframework
-        run: |
-          echo "下载 xcframework..."
-          echo "OSS URL: ${{ github.event.client_payload.oss_url }}"
-          curl -L -o PopIMLib.xcframework.zip "${{ github.event.client_payload.oss_url }}"
-          echo "文件大小: $(stat -f%z PopIMLib.xcframework.zip) bytes"
-          echo "文件类型检查:"
-          file PopIMLib.xcframework.zip
-          echo "文件头部内容:"
-          head -c 200 PopIMLib.xcframework.zip | od -A x -t x1 -v
-
-      - name: 更新仓库中的 xcframework
-        run: |
-          echo "解压并替换 xcframework..."
-          rm -rf PopIMLib/PopIMLib.xcframework
-          unzip -q PopIMLib.xcframework.zip -d PopIMLib/
-          echo "✅ xcframework 已更新"
-
-      - name: 更新 podspec 版本号
+      - name: 下载 xcframework 并更新版本
         run: |
           VERSION="${{ github.event.client_payload.version }}"
-          echo "更新 PopIMLib.podspec 版本号为 ${VERSION}..."
+          echo "版本号: ${VERSION}"
+
+          # 下载
+          curl -L -o PopIMLib.xcframework.zip "${{ github.event.client_payload.oss_url }}"
+
+          # 解压替换
+          rm -rf PopIMLib/PopIMLib.xcframework
+          unzip -q PopIMLib.xcframework.zip -d PopIMLib/
+
+          # 更新 podspec 版本号
           sed -i '' "s/s.version[[:space:]]*=.*/s.version      = \"${VERSION}\"                # 版本号（必填，需与后续 tag 一致）/" PopIMLib.podspec
-          echo "✅ 版本号已更新"
 
       - name: 创建 GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           VERSION="${{ github.event.client_payload.version }}"
-          echo "创建 Release ${VERSION}..."
-
-          # 配置 git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # 提交 xcframework 和 podspec 更新
           git add PopIMLib/PopIMLib.xcframework PopIMLib.podspec
-          git commit -m "Update PopIMLib to version ${VERSION}" || echo "无需提交（版本号未变化）"
+          git commit -m "Update PopIMLib to version ${VERSION}" || echo "无需提交"
           git push origin main || echo "推送失败或无需推送"
 
-          # 如果 Release 已存在，先删除 Release 和 tag
+          # 清理已存在的 Release 和 tag
           if gh release view "${VERSION}" --repo ev8kdla9uzbg/PopIMLib >/dev/null 2>&1; then
-            echo "Release ${VERSION} 已存在，删除 Release 和 tag..."
             gh release delete "${VERSION}" --repo ev8kdla9uzbg/PopIMLib --yes
-            git push --delete origin "${VERSION}" 2>/dev/null || echo "远程 tag 已删除或不存在"
-            git tag -d "${VERSION}" 2>/dev/null || echo "本地 tag 已删除或不存在"
+            git push --delete origin "${VERSION}" 2>/dev/null || true
+            git tag -d "${VERSION}" 2>/dev/null || true
           fi
 
-          # 创建 tag
           git tag -a "${VERSION}" -m "Release ${VERSION}"
           git push origin "${VERSION}"
 
-          # 生成 changelog
           PREV_TAG=$(git tag --sort=-version:refname | grep -v "^${VERSION}$" | head -1)
           if [ -z "$PREV_TAG" ]; then
             CHANGELOG=$(git log --pretty=format:"- %s" ${VERSION})
@@ -87,73 +63,36 @@ jobs:
             CHANGELOG=$(git log --pretty=format:"- %s" ${PREV_TAG}..${VERSION})
           fi
 
-          # 创建 Release
-          gh release create "${VERSION}" \
-            PopIMLib.xcframework.zip \
-            --title "PopIMLib ${VERSION}" \
-            --notes "${CHANGELOG}" \
+          gh release create "${VERSION}" PopIMLib.xcframework.zip \
+            --title "PopIMLib ${VERSION}" --notes "${CHANGELOG}" \
             --repo ev8kdla9uzbg/PopIMLib
 
       - name: 设置 Ruby 环境
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0'
-          bundler-cache: false
 
       - name: 安装 CocoaPods
-        run: |
-          gem install cocoapods
-          pod --version
+        run: gem install cocoapods
 
-      - name: 安装 coreutils（提供 timeout 命令）
+      - name: 安装 coreutils
         run: brew install coreutils
 
-      - name: 推送到 CocoaPods（带重试和硬超时）
+      - name: 推送到 CocoaPods
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
-          MAX_ATTEMPTS=5
-          TIMEOUT=600  # 单次超时 10 分钟
-          RETRY_DELAY=60
-
-          for attempt in $(seq 1 $MAX_ATTEMPTS); do
-            echo "=========================================="
-            echo "尝试 $attempt/$MAX_ATTEMPTS 推送到 CocoaPods..."
-            echo "=========================================="
-
-            # 用 gtimeout/timeout 做硬超时，进程卡住也能杀掉
-            if command -v gtimeout >/dev/null 2>&1; then
-              TIMEOUT_CMD="gtimeout --kill-after=30 ${TIMEOUT}"
-            elif command -v timeout >/dev/null 2>&1; then
-              TIMEOUT_CMD="timeout --kill-after=30 ${TIMEOUT}"
-            else
-              TIMEOUT_CMD=""
-            fi
-
-            if $TIMEOUT_CMD pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous; then
+          for attempt in 1 2 3; do
+            echo "尝试 $attempt/3 推送到 CocoaPods..."
+            if gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous; then
               echo "✅ 推送成功！"
               exit 0
-            else
-              EXIT_CODE=$?
-              echo "❌ 尝试 $attempt 失败 (退出码: $EXIT_CODE)"
-
-              if [ $EXIT_CODE -eq 124 ] || [ $EXIT_CODE -eq 137 ]; then
-                echo "⏰ 命令超时被终止"
-              fi
-
-              if [ $attempt -lt $MAX_ATTEMPTS ]; then
-                echo "等待 ${RETRY_DELAY} 秒后重试..."
-                sleep $RETRY_DELAY
-              fi
             fi
+            echo "❌ 尝试 $attempt 失败"
+            [ $attempt -lt 3 ] && sleep 30
           done
-
-          echo "❌ 所有 $MAX_ATTEMPTS 次尝试均失败"
+          echo "❌ 所有尝试均失败"
           exit 1
 
       - name: 完成
-        run: |
-          echo "=========================================="
-          echo "✅ 发布完成"
-          echo "版本: ${{ github.event.client_payload.version }}"
-          echo "=========================================="
+        run: echo "✅ 发布完成 - 版本: ${{ github.event.client_payload.version }}"
