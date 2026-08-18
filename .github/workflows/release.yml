@@ -82,17 +82,9 @@ jobs:
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
-          for attempt in 1 2 3; do
-            echo "尝试 $attempt/3 推送到 CocoaPods..."
-            if gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous; then
-              echo "✅ 推送成功！"
-              exit 0
-            fi
-            echo "❌ 尝试 $attempt 失败"
-            [ $attempt -lt 3 ] && sleep 30
-          done
-          echo "❌ 所有尝试均失败"
-          exit 1
+          gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous || \
+          gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous || \
+          gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous
 
       - name: 完成
         run: echo "✅ 发布完成 - 版本: ${{ github.event.client_payload.version }}"
