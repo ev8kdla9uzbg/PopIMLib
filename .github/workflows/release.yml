@@ -79,6 +79,9 @@ jobs:
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
+          pod repo remove trunk 2>/dev/null || true
+          pod repo remove master 2>/dev/null || true
+          pod repo remove cocoapods 2>/dev/null || true
           gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous || gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous || gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous
 
       - name: 完成
