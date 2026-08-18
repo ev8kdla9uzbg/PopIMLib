@@ -82,4 +82,4 @@ jobs:
           gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous || gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous || gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous
 
       - name: 完成
-        run: echo "✅ 发布完成 - 版本: ${{ github.event.client_payload.version }}"
+        run: echo "✅ 发布完成 - 版本 ${{ github.event.client_payload.version }}"
