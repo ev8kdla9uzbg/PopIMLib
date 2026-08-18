@@ -11,7 +11,6 @@ permissions:
 jobs:
   release:
     runs-on: macos-latest
-    timeout-minutes: 10
 
     steps:
       - name: Checkout code
@@ -72,37 +71,12 @@ jobs:
       - name: 安装 CocoaPods
         run: gem install cocoapods
 
-      - name: 安装 coreutils
-        run: brew install coreutils
-
       - name: 推送到 CocoaPods
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
-          VERSION="${{ github.event.client_payload.version }}"
-
-          # 尝试推送，忽略超时错误（退出码 124 = gtimeout 超时）
-          gtimeout --kill-after=10 300 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous || {
-            EXIT_CODE=$?
-            if [ $EXIT_CODE -eq 124 ] || [ $EXIT_CODE -eq 137 ]; then
-              echo "⚠️  命令超时，但可能已推送成功，检查 API..."
-            else
-              echo "❌ 推送失败，退出码: $EXIT_CODE"
-              exit 1
-            fi
-          }
-
-          # 等待 API 同步
-          sleep 30
-
-          # 检查是否发布成功
-          if curl -s "https://trunk.cocoapods.org/api/v1/pods/PopIMLib" | grep -q "\"version\":\"${VERSION}\""; then
-            echo "✅ 版本 ${VERSION} 已成功发布到 CocoaPods"
-            exit 0
-          else
-            echo "❌ 未能在 CocoaPods API 中找到版本 ${VERSION}"
-            exit 1
-          fi
+          echo "推送到 CocoaPods..."
+          pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --verbose
 
       - name: 完成
         run: echo "✅ 发布完成 - 版本 ${{ github.event.client_payload.version }}"
