@@ -24,16 +24,11 @@ jobs:
           VERSION="${{ github.event.client_payload.version }}"
           echo "版本号: ${VERSION}"
 
-          # 下载（带重试）
-          curl -L -o PopIMLib.xcframework.zip "${{ github.event.client_payload.oss_url }}" || \
-          curl -L -o PopIMLib.xcframework.zip "${{ github.event.client_payload.oss_url }}" || \
-          curl -L -o PopIMLib.xcframework.zip "${{ github.event.client_payload.oss_url }}"
+          curl -L -o PopIMLib.xcframework.zip "${{ github.event.client_payload.oss_url }}" || curl -L -o PopIMLib.xcframework.zip "${{ github.event.client_payload.oss_url }}" || curl -L -o PopIMLib.xcframework.zip "${{ github.event.client_payload.oss_url }}"
 
-          # 解压替换
           rm -rf PopIMLib/PopIMLib.xcframework
           unzip -q PopIMLib.xcframework.zip -d PopIMLib/
 
-          # 更新 podspec 版本号
           sed -i '' "s/s.version[[:space:]]*=.*/s.version      = \"${VERSION}\"                # 版本号（必填，需与后续 tag 一致）/" PopIMLib.podspec
 
       - name: 创建 GitHub Release
@@ -84,9 +79,7 @@ jobs:
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
-          gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous || \
-          gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous || \
-          gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous
+          gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous || gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous || gtimeout --kill-after=10 120 pod trunk push PopIMLib.podspec --allow-warnings --skip-import-validation --skip-tests --synchronous
 
       - name: 完成
         run: echo "✅ 发布完成 - 版本: ${{ github.event.client_payload.version }}"
