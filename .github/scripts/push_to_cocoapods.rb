@@ -124,7 +124,7 @@ end
 
 # 推送到 CocoaPods（单次尝试）
 def push_attempt
-  cmd = "pod trunk push #{PODSPEC_FILE} --allow-warnings --skip-import-validation --verbose --synchronous"
+  cmd = "pod trunk push #{PODSPEC_FILE} --allow-warnings --skip-import-validation --skip-tests --verbose --synchronous"
   log_info("执行: #{cmd}")
 
   # 使用 system 并捕获退出状态

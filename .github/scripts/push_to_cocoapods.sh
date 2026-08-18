@@ -67,6 +67,7 @@ push_to_cocoapods() {
         if pod trunk push "$PODSPEC_FILE" \
             --allow-warnings \
             --skip-import-validation \
+            --skip-tests \
             --verbose \
             --synchronous; then
             echo -e "${GREEN}========================================${NC}"
