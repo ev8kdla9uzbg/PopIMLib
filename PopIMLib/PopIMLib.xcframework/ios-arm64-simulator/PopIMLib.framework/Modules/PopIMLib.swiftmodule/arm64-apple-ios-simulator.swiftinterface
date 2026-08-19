@@ -9318,6 +9318,7 @@ public struct PopIMExceptionType {
   public static let DATABASE_DELETE_FAILED: Swift.String
   public static let DATABASE_LOAD_FAILED: Swift.String
   public static let DATABASE_UPDATE_FAILED: Swift.String
+  public static let KEYCHAIN_UDID_SAVE_FAILURE: Swift.String
   public static let UNKNOWN: Swift.String
 }
 @_hasMissingDesignatedInitializers public class PopIMCrashUploader {
