@@ -251221,7 +251221,7 @@
       "kind": "StringLiteral",
       "offset": 347,
       "length": 14,
-      "value": "\"202608191836\""
+      "value": "\"202608241100\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCoreClient.swift",
@@ -254012,21 +254012,21 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PopIMMessageDataMaker.swift",
       "kind": "StringLiteral",
-      "offset": 34109,
+      "offset": 36337,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PopIMMessageDataMaker.swift",
       "kind": "BooleanLiteral",
-      "offset": 34248,
+      "offset": 36476,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PopIMMessageDataMaker.swift",
       "kind": "IntegerLiteral",
-      "offset": 34421,
+      "offset": 36649,
       "length": 1,
       "value": "0"
     },
@@ -258268,7 +258268,7 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/8Tool\/PopIMFuncTool.swift",
       "kind": "BooleanLiteral",
-      "offset": 8798,
+      "offset": 8957,
       "length": 5,
       "value": "false"
     },
