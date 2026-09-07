@@ -667,9 +667,10 @@ SWIFT_PROTOCOL("_TtP8PopIMLib25PopIMConversationProtocol_")
 /// @param targetId 会话目标ID
 /// @param channelId 频道ID
 /// @param changeType 变更类型（未读数/置顶/免打扰）
+/// @param isFinish 批量变更中是否为最后一条，true 表示本批次处理完毕
 /// @discussion 当收到服务端 clearReadSync 导致未读数变化、或 SessionChangeNtf 导致置顶/免打扰状态变化时触发。
 /// 本地主动操作（如 clearMessagesUnreadStatus、setConversationToTop、setConversationNotificationStatus）不会触发此回调。
-- (void)conversationPropertyDidChangeWithConversationType:(enum PopIMMessageSessionType)conversationType targetId:(NSString * _Nonnull)targetId channelId:(NSString * _Nonnull)channelId changeType:(enum PopIMConversationPropertyChangeType)changeType;
+- (void)conversationPropertyDidChangeWithConversationType:(enum PopIMMessageSessionType)conversationType targetId:(NSString * _Nonnull)targetId channelId:(NSString * _Nonnull)channelId changeType:(enum PopIMConversationPropertyChangeType)changeType isFinish:(BOOL)isFinish;
 @end
 
 SWIFT_CLASS("_TtC8PopIMLib20PopIMConversationTag")
@@ -832,6 +833,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PopIMLibSDK 
 /// 更新完成之后-结果会触发delegate - conversationDidChange
 /// @param conversation 会话
 - (void)clearMessagesUnreadStatus:(PopIMConversationModel * _Nonnull)conversation;
+/// 一键清除所有会话的未读消息数
+/// 获取所有未读会话（包括免打扰），通过批量 eventType 7 一次性清除
+/// 清除完成后会触发 delegate - conversationDidChange
+/// @param successBlock 成功回调
+/// @param errorBlock 失败回调
+- (void)clearAllMessagesUnreadStatusWithSuccessBlock:(void (^ _Nonnull)(void))successBlock errorBlock:(void (^ _Nonnull)(NSString * _Nonnull))errorBlock;
 /// Objective-C 适配方法 - 获取所有会话总未读消息数（默认包含免打扰）
 - (void)getTotalUnreadCountWithCompletion:(void (^ _Nonnull)(NSInteger))completion;
 /// Objective-C 适配方法 - 获取所有会话总未读消息数

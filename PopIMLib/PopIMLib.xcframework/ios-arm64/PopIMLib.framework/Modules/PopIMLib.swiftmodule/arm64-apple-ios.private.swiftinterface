@@ -5381,7 +5381,7 @@ public class CMAC : PopIMLib.Authenticator {
 @objc public protocol PopIMConversationProtocol {
   @objc optional func conversationDidChange()
   @objc optional func didClickPushConversation(_ type: PopIMLib.PopIMMessageSessionType, targetId: Swift.String, pushData: Swift.String)
-  @objc optional func conversationPropertyDidChange(conversationType: PopIMLib.PopIMMessageSessionType, targetId: Swift.String, channelId: Swift.String, changeType: PopIMLib.PopIMConversationPropertyChangeType)
+  @objc optional func conversationPropertyDidChange(conversationType: PopIMLib.PopIMMessageSessionType, targetId: Swift.String, channelId: Swift.String, changeType: PopIMLib.PopIMConversationPropertyChangeType, isFinish: Swift.Bool)
 }
 @objc public protocol PopIMMessageProtocol {
   @objc optional func onReceived(_ messages: [PopIMLib.PopIMMessageModel], offline: Swift.Bool)
@@ -6272,6 +6272,7 @@ public struct JSONColumn : PopIMLib.ColumnExpression, PopIMLib.SQLJSONExpressibl
   @objc(getUnreadConversationListWithConversationTypeList:completion:) public func _objc_getUnreadConversationList(conversationTypeNumbers: [Foundation.NSNumber], completion: @escaping ([PopIMLib.PopIMConversationModel]) -> Swift.Void)
   @objc public func getConversation(conversationType: PopIMLib.PopIMMessageSessionType, targetId: Swift.String, channelId: Swift.String = "", completion: ((PopIMLib.PopIMConversationModel) -> Swift.Void)?)
   @objc public func clearMessagesUnreadStatus(_ conversation: PopIMLib.PopIMConversationModel)
+  @objc public func clearAllMessagesUnreadStatus(successBlock: @escaping () -> Swift.Void, errorBlock: @escaping (Swift.String) -> Swift.Void)
   @nonobjc public func getTotalUnreadCount(containBlocked: Swift.Bool = true, completion: @escaping (ObjectiveC.NSInteger) -> Swift.Void)
   @objc(getTotalUnreadCountWithCompletion:) public func _objc_getTotalUnreadCount(completion: @escaping (ObjectiveC.NSInteger) -> Swift.Void)
   @objc(getTotalUnreadCountWithContainBlocked:completion:) public func _objc_getTotalUnreadCount(containBlocked: Swift.Bool, completion: @escaping (ObjectiveC.NSInteger) -> Swift.Void)
