@@ -247446,7 +247446,7 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "IntegerLiteral",
-      "offset": 22979,
+      "offset": 23097,
       "length": 2,
       "value": "32"
     },
@@ -251284,7 +251284,7 @@
       "kind": "StringLiteral",
       "offset": 347,
       "length": 14,
-      "value": "\"202609071100\""
+      "value": "\"202609091400\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCoreClient.swift",
@@ -252261,8 +252261,15 @@
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/3Message\/PopIMMessageTimerManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1405,
+      "length": 22,
+      "value": "\"com.popim.timer.fire\""
+    },
+    {
+      "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/3Message\/PopIMMessageTimerManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1370,
+      "offset": 1550,
       "length": 5,
       "value": "false"
     },
