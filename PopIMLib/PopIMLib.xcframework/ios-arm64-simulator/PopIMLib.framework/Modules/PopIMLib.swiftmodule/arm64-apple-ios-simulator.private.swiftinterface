@@ -3812,14 +3812,13 @@ open class WebSocket : PopIMLib.WebSocketClient, PopIMLib.EngineDelegate {
     get
     set
   }
-  public var delegateQueue: Dispatch.DispatchQueue
   public var connState: PopIMLib.CocoaMQTTConnState {
     get
     set
   }
   public var logLevel: PopIMLib.CocoaMQTTLoggerLevel
-  public init(clientID: Swift.String, host: Swift.String = "localhost", port: Swift.UInt16 = 1883)
-  public init(clientID: Swift.String, host: Swift.String = "localhost", port: Swift.UInt16 = 1883, socket: any PopIMLib.CocoaMQTTSocketProtocol)
+  public init(clientID: Swift.String, host: Swift.String = "localhost", port: Swift.UInt16 = 1883, operationQueue: Dispatch.DispatchQueue? = nil)
+  public init(clientID: Swift.String, host: Swift.String = "localhost", port: Swift.UInt16 = 1883, socket: any PopIMLib.CocoaMQTTSocketProtocol, operationQueue: Dispatch.DispatchQueue? = nil)
   @discardableResult
   public func connect() -> Swift.Bool
   @discardableResult

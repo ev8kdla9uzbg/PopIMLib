@@ -91698,92 +91698,6 @@
           },
           {
             "kind": "Var",
-            "name": "delegateQueue",
-            "printedName": "delegateQueue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "DispatchQueue",
-                "printedName": "Dispatch.DispatchQueue",
-                "usr": "c:objc(cs)OS_dispatch_queue"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8PopIMLib10CocoaMQTT5C13delegateQueueSo17OS_dispatch_queueCvp",
-            "mangledName": "$s8PopIMLib10CocoaMQTT5C13delegateQueueSo17OS_dispatch_queueCvp",
-            "moduleName": "PopIMLib",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DispatchQueue",
-                    "printedName": "Dispatch.DispatchQueue",
-                    "usr": "c:objc(cs)OS_dispatch_queue"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8PopIMLib10CocoaMQTT5C13delegateQueueSo17OS_dispatch_queueCvg",
-                "mangledName": "$s8PopIMLib10CocoaMQTT5C13delegateQueueSo17OS_dispatch_queueCvg",
-                "moduleName": "PopIMLib",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DispatchQueue",
-                    "printedName": "Dispatch.DispatchQueue",
-                    "usr": "c:objc(cs)OS_dispatch_queue"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8PopIMLib10CocoaMQTT5C13delegateQueueSo17OS_dispatch_queueCvs",
-                "mangledName": "$s8PopIMLib10CocoaMQTT5C13delegateQueueSo17OS_dispatch_queueCvs",
-                "moduleName": "PopIMLib",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8PopIMLib10CocoaMQTT5C13delegateQueueSo17OS_dispatch_queueCvM",
-                "mangledName": "$s8PopIMLib10CocoaMQTT5C13delegateQueueSo17OS_dispatch_queueCvM",
-                "moduleName": "PopIMLib",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "connState",
             "printedName": "connState",
             "children": [
@@ -91957,7 +91871,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(clientID:host:port:)",
+            "printedName": "init(clientID:host:port:operationQueue:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -91984,11 +91898,26 @@
                 "printedName": "Swift.UInt16",
                 "hasDefaultArg": true,
                 "usr": "s:s6UInt16V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Dispatch.DispatchQueue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DispatchQueue",
+                    "printedName": "Dispatch.DispatchQueue",
+                    "usr": "c:objc(cs)OS_dispatch_queue"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8PopIMLib10CocoaMQTT5C8clientID4host4portACSS_SSs6UInt16Vtcfc",
-            "mangledName": "$s8PopIMLib10CocoaMQTT5C8clientID4host4portACSS_SSs6UInt16Vtcfc",
+            "usr": "s:8PopIMLib10CocoaMQTT5C8clientID4host4port14operationQueueACSS_SSs6UInt16VSo17OS_dispatch_queueCSgtcfc",
+            "mangledName": "$s8PopIMLib10CocoaMQTT5C8clientID4host4port14operationQueueACSS_SSs6UInt16VSo17OS_dispatch_queueCSgtcfc",
             "moduleName": "PopIMLib",
             "declAttributes": [
               "AccessControl",
@@ -91999,7 +91928,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(clientID:host:port:socket:)",
+            "printedName": "init(clientID:host:port:socket:operationQueue:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -92032,11 +91961,26 @@
                 "name": "CocoaMQTTSocketProtocol",
                 "printedName": "any PopIMLib.CocoaMQTTSocketProtocol",
                 "usr": "s:8PopIMLib23CocoaMQTTSocketProtocolP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Dispatch.DispatchQueue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DispatchQueue",
+                    "printedName": "Dispatch.DispatchQueue",
+                    "usr": "c:objc(cs)OS_dispatch_queue"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8PopIMLib10CocoaMQTT5C8clientID4host4port6socketACSS_SSs6UInt16VAA0C18MQTTSocketProtocol_ptcfc",
-            "mangledName": "$s8PopIMLib10CocoaMQTT5C8clientID4host4port6socketACSS_SSs6UInt16VAA0C18MQTTSocketProtocol_ptcfc",
+            "usr": "s:8PopIMLib10CocoaMQTT5C8clientID4host4port6socket14operationQueueACSS_SSs6UInt16VAA0C18MQTTSocketProtocol_pSo17OS_dispatch_queueCSgtcfc",
+            "mangledName": "$s8PopIMLib10CocoaMQTT5C8clientID4host4port6socket14operationQueueACSS_SSs6UInt16VAA0C18MQTTSocketProtocol_pSo17OS_dispatch_queueCSgtcfc",
             "moduleName": "PopIMLib",
             "declAttributes": [
               "AccessControl"
@@ -246893,14 +246837,14 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase.swift",
       "kind": "StringLiteral",
-      "offset": 38428,
+      "offset": 38729,
       "length": 10,
       "value": "\"TRUNCATE\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase.swift",
       "kind": "Dictionary",
-      "offset": 41737,
+      "offset": 42038,
       "length": 3,
       "value": "[]"
     },
@@ -247299,154 +247243,154 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "BooleanLiteral",
-      "offset": 2354,
+      "offset": 2355,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "IntegerLiteral",
-      "offset": 2424,
+      "offset": 2425,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "BooleanLiteral",
-      "offset": 2497,
+      "offset": 2498,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "BooleanLiteral",
-      "offset": 2590,
+      "offset": 2591,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "Array",
-      "offset": 2725,
+      "offset": 2726,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "IntegerLiteral",
-      "offset": 2808,
+      "offset": 2809,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 2939,
+      "offset": 2940,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 3063,
+      "offset": 3064,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "IntegerLiteral",
-      "offset": 3199,
+      "offset": 3200,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 3649,
+      "offset": 3650,
       "length": 22,
       "value": "\"com.popim.mqtt.state\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5025,
+      "offset": 5324,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5061,
+      "offset": 5360,
       "length": 12,
       "value": "\"Connecting\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5098,
+      "offset": 5397,
       "length": 11,
       "value": "\"Connected\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5137,
+      "offset": 5436,
       "length": 14,
       "value": "\"Reconnecting\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5154,
+      "offset": 5453,
       "length": 19,
       "value": "\"Connection failed\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5217,
+      "offset": 5516,
       "length": 15,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5231,
+      "offset": 5530,
       "length": 17,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5577,
+      "offset": 5876,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "BooleanLiteral",
-      "offset": 5904,
+      "offset": 6203,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "IntegerLiteral",
-      "offset": 6104,
+      "offset": 6403,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "BooleanLiteral",
-      "offset": 9997,
+      "offset": 10296,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "IntegerLiteral",
-      "offset": 23097,
+      "offset": 23452,
       "length": 2,
       "value": "32"
     },
@@ -248887,99 +248831,92 @@
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
-      "kind": "StringLiteral",
-      "offset": 3885,
-      "length": 25,
-      "value": "\"com.ycim.mqtt.operation\""
-    },
-    {
-      "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
       "kind": "IntegerLiteral",
-      "offset": 3970,
+      "offset": 3969,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
       "kind": "StringLiteral",
-      "offset": 4404,
+      "offset": 4528,
       "length": 11,
       "value": "\"localhost\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
       "kind": "IntegerLiteral",
-      "offset": 4432,
+      "offset": 4556,
       "length": 4,
       "value": "1883"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
       "kind": "StringLiteral",
-      "offset": 4644,
+      "offset": 4919,
       "length": 11,
       "value": "\"localhost\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
       "kind": "IntegerLiteral",
-      "offset": 4672,
+      "offset": 4947,
       "length": 4,
       "value": "1883"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
       "kind": "BooleanLiteral",
-      "offset": 7838,
+      "offset": 8269,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
       "kind": "BooleanLiteral",
-      "offset": 7862,
+      "offset": 8293,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
       "kind": "IntegerLiteral",
-      "offset": 20902,
+      "offset": 20136,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
       "kind": "IntegerLiteral",
-      "offset": 20913,
+      "offset": 20147,
       "length": 5,
       "value": "1"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
       "kind": "IntegerLiteral",
-      "offset": 20928,
+      "offset": 20162,
       "length": 7,
       "value": "2"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
       "kind": "IntegerLiteral",
-      "offset": 20945,
+      "offset": 20179,
       "length": 4,
       "value": "3"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
       "kind": "IntegerLiteral",
-      "offset": 20959,
+      "offset": 20193,
       "length": 5,
       "value": "4"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/ThirdSDK\/CocoaMQTT\/YCCocoaMQTT5.swift",
       "kind": "IntegerLiteral",
-      "offset": 20974,
+      "offset": 20208,
       "length": 7,
       "value": "5"
     },
@@ -251284,7 +251221,7 @@
       "kind": "StringLiteral",
       "offset": 347,
       "length": 14,
-      "value": "\"202609091400\""
+      "value": "\"202609151730\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCoreClient.swift",
@@ -251317,7 +251254,7 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCoreClient.swift",
       "kind": "StringLiteral",
-      "offset": 8799,
+      "offset": 8979,
       "length": 6,
       "value": "\"item\""
     },
