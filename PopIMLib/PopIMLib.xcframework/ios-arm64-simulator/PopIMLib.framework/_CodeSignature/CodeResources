@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/PopIMLib-Swift.h</key>
 		<data>
-		FU/zT6+dmyYZlGx8n/mbdGinaLg=
+		CIo5tJPy+u7D86Uu1aAi3kMXlYw=
 		</data>
 		<key>Headers/PopIMLib.h</key>
 		<data>
@@ -22,27 +22,27 @@
 		</data>
 		<key>Modules/PopIMLib.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		PNuG/aXlwM30cqV1eMZXuAOCMR0=
+		VYQ0hdTyR9JZxVvL7GaNpBI7G6A=
 		</data>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		bsRkoUIN54DVlXb1zJ1h4swqAxo=
+		2o2AFxqsNUH8hLJjM1eA6AsY4Qc=
 		</data>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		yKVYyw4yifd8zeCaAC44259PCS8=
+		iVJqslMPQLZp/o89ub2loUMs3Tw=
 		</data>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		gVMj2ugI+fFGls29F4b4YM6DsbM=
+		XeH0I1EJZ4HG8ceKhs+jJtfwi7Y=
 		</data>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		yKVYyw4yifd8zeCaAC44259PCS8=
+		iVJqslMPQLZp/o89ub2loUMs3Tw=
 		</data>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		H/8oN4mZTLX5GW1/VoOj1Uit8o4=
+		LmqwLnTGsHh9AHNzMTf8M8v453o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,7 +66,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZJuNPktnIGoZF/WHoxrg9QvNhDX3+jyI9HSs8TPYXjE=
+			DmjhC6zTILcZu67DrHKCZlx8BF3B9Y7mhLom9S8jQzY=
 			</data>
 		</dict>
 		<key>Headers/PopIMLib.h</key>
@@ -80,42 +80,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			E8TPMUUThO3pGTROMFhaTDsbbzzyF7j2B4RIHqsq9c0=
+			FLuVAgpKgYZ+8xr6Pw9kX6sAP5dyV884y0Ky7PMADHk=
 			</data>
 		</dict>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lbg2UCAGUp9gRaGjubbjMF1WmIBhUs1KHAGml7o5es0=
+			tLSo0/hdAbJEMmPgOmwAZiDyYMSelVL0mJ/RK8rCjzI=
 			</data>
 		</dict>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V/UnpWkciiAiXmn2PU/EqEKbTIexxldUULxgGdTawYA=
+			/rXgrc/iDU+nDjZa4qtSsFiZjf5ogqgdQNpuEfDZZ7E=
 			</data>
 		</dict>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UhvIJTx1Jr1/+p4fpEb9mmjCuYq3MDQDASw+gkzrW/s=
+			Jwb8Vf2JWTgHBRxSjuudqc2D7m22b3Akux9Vz6p1C0U=
 			</data>
 		</dict>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V/UnpWkciiAiXmn2PU/EqEKbTIexxldUULxgGdTawYA=
+			/rXgrc/iDU+nDjZa4qtSsFiZjf5ogqgdQNpuEfDZZ7E=
 			</data>
 		</dict>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qtIZBuDmDRVRxrmwf4GZMlGwpubygbxSghfQuB6y2gA=
+			4aLKzrR6XrLbGrQjAgLimlGQk4awmL1hyx85HI349Zo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

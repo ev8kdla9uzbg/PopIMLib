@@ -910,6 +910,18 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PopIMLibSDK 
 /// \param completion 结果回调
 ///
 - (void)searchConversationsWithConversationTypeList:(NSArray<NSNumber *> * _Nonnull)conversationTypeNumbers messageType:(NSArray<NSNumber *> * _Nonnull)messageType keyword:(NSString * _Nonnull)keyword completion:(void (^ _Nonnull)(NSArray<PopIMSearchConversationResult *> * _Nonnull))completion;
+/// Objective-C 适配方法 - 按消息体内指定字段搜索会话
+/// \param conversationTypeList 会话类型 NSNumber 数组
+///
+/// \param messageType 消息类型 NSNumber 数组
+///
+/// \param keyword 关键字
+///
+/// \param jsonKey 消息体内的字段路径，形如 content.a.b，传 nil 或空串时在整个消息体内搜索
+///
+/// \param completion 结果回调
+///
+- (void)searchConversationsWithConversationTypeList:(NSArray<NSNumber *> * _Nonnull)conversationTypeNumbers messageType:(NSArray<NSNumber *> * _Nonnull)messageType keyword:(NSString * _Nonnull)keyword jsonKey:(NSString * _Nullable)jsonKey completion:(void (^ _Nonnull)(NSArray<PopIMSearchConversationResult *> * _Nonnull))completion;
 /// 设置会话置顶
 /// @param conversationType 会话类型
 /// @param targetId 会话对方的用户ID
@@ -1170,6 +1182,27 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PopIMLibSDK 
 /// \param completion 结果回调
 ///
 - (void)searchMessagesWithConversationType:(enum PopIMMessageSessionType)conversationType targetId:(NSString * _Nonnull)targetId keyword:(NSString * _Nonnull)keyword objectNameList:(NSArray<NSNumber *> * _Nullable)objectNameList startTime:(NSNumber * _Nullable)startTime endTime:(NSNumber * _Nullable)endTime offset:(NSInteger)offset limit:(NSInteger)limit completion:(void (^ _Nonnull)(NSArray<PopIMMessageModel *> * _Nonnull))completion;
+/// \param conversationType 会话类型
+///
+/// \param targetId 会话目标 ID
+///
+/// \param keyword 搜索关键字
+///
+/// \param jsonKey 消息体内的字段路径，形如 content.a.b，传 nil 或空串时在整个消息体内搜索
+///
+/// \param objectNameList 消息类型 NSNumber 数组，可选
+///
+/// \param startTime 开始时间 NSNumber，可选
+///
+/// \param endTime 结束时间 NSNumber，可选
+///
+/// \param offset 偏移量
+///
+/// \param limit 数量
+///
+/// \param completion 结果回调
+///
+- (void)searchMessagesWithConversationType:(enum PopIMMessageSessionType)conversationType targetId:(NSString * _Nonnull)targetId keyword:(NSString * _Nonnull)keyword jsonKey:(NSString * _Nullable)jsonKey objectNameList:(NSArray<NSNumber *> * _Nullable)objectNameList startTime:(NSNumber * _Nullable)startTime endTime:(NSNumber * _Nullable)endTime offset:(NSInteger)offset limit:(NSInteger)limit completion:(void (^ _Nonnull)(NSArray<PopIMMessageModel *> * _Nonnull))completion;
 - (void)setMessageExpansionListener:(id <PopMessageExpansionDelegate> _Nonnull)delegate;
 - (void)removeMessageExpansionListener:(id <PopMessageExpansionDelegate> _Nonnull)delegate;
 /// 设置消息拓展
