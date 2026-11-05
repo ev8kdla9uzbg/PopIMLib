@@ -251000,7 +251000,7 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/3Message\/PopIMMessageManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 18477,
+      "offset": 19157,
       "length": 4,
       "value": "true"
     },
@@ -251842,7 +251842,7 @@
       "kind": "StringLiteral",
       "offset": 347,
       "length": 14,
-      "value": "\"202611041800\""
+      "value": "\"202611051040\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCoreClient.swift",
