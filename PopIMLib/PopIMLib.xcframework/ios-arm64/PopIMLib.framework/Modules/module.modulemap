@@ -7,5 +7,4 @@ framework module PopIMLib {
 
 module PopIMLib.Swift {
   header "PopIMLib-Swift.h"
-  requires objc
 }
