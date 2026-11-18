@@ -22,15 +22,15 @@
 		</data>
 		<key>Modules/PopIMLib.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		uRcEVZ5gmGi25+oJnI7uswQ2HFU=
+		Apfoye5zPFgzn23/HfiVTfS+kRg=
 		</data>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		pgrhXNy6OGvLi34LqW4gHlx+VNc=
+		/GPzAfQCP3s3J9qupR+mzgPccMM=
 		</data>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		C8roRY51esvwtcpkkjPeCHKHte8=
+		65o6PahoqQ3Ob0/cMFaa9XfRSSM=
 		</data>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		C8roRY51esvwtcpkkjPeCHKHte8=
+		65o6PahoqQ3Ob0/cMFaa9XfRSSM=
 		</data>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bRR9x2zi/5l9yJt6+F51UBnKwyQ=
+		eYDNBu0jqkV5TyXb39azyXyd1BI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -80,21 +80,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rdbZYwW2fsK3dqNG6vGpqvdhezaqGKO8eOqE7S0UTkI=
+			abEFvpA5dP3HWjWGbp4jTgG2WnpWLRizm9jTzVp0dO4=
 			</data>
 		</dict>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sU8UV6jkj0AqO9jq7T4Kgk6BoT/B+JSLvqj/hLfAxbQ=
+			nkEG32NRmEKNmvRdlzyyDDXCpb0p0qgSGT26GYheE/0=
 			</data>
 		</dict>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gDZ/P3VkRGGqX6MKIfkGKZ4HtMTfiXJC6xJif7zXSRY=
+			NjrDy3qcHYI1cCxR/+RWx2p91OxwlDhWlIRtuc9eTp0=
 			</data>
 		</dict>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -108,14 +108,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gDZ/P3VkRGGqX6MKIfkGKZ4HtMTfiXJC6xJif7zXSRY=
+			NjrDy3qcHYI1cCxR/+RWx2p91OxwlDhWlIRtuc9eTp0=
 			</data>
 		</dict>
 		<key>Modules/PopIMLib.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZjbBRIU3EAGWgUmj81Fpn+OohBWrw0TjWYOpR7xwa4c=
+			Koaw0J4WqFLSPf4S27QTHV6K0zD2BAdiyeZR6Znz3PM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

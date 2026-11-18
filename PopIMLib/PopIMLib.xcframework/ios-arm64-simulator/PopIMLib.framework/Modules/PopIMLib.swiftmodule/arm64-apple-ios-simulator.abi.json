@@ -39263,8 +39263,8 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftProtobuf",
-        "printedName": "SwiftProtobuf",
+        "name": "PopIMSwiftProtobuf",
+        "printedName": "PopIMSwiftProtobuf",
         "declKind": "Import",
         "moduleName": "PopIMLib",
         "declAttributes": [
@@ -44371,8 +44371,8 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftProtobuf",
-        "printedName": "SwiftProtobuf",
+        "name": "PopIMSwiftProtobuf",
+        "printedName": "PopIMSwiftProtobuf",
         "declKind": "Import",
         "moduleName": "PopIMLib",
         "declAttributes": [
@@ -91865,8 +91865,8 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftProtobuf",
-        "printedName": "SwiftProtobuf",
+        "name": "PopIMSwiftProtobuf",
+        "printedName": "PopIMSwiftProtobuf",
         "declKind": "Import",
         "moduleName": "PopIMLib",
         "declAttributes": [
@@ -133570,8 +133570,8 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftProtobuf",
-        "printedName": "SwiftProtobuf",
+        "name": "PopIMSwiftProtobuf",
+        "printedName": "PopIMSwiftProtobuf",
         "declKind": "Import",
         "moduleName": "PopIMLib",
         "declAttributes": [
@@ -192180,6 +192180,150 @@
           },
           {
             "kind": "Var",
+            "name": "OFFLINE_LOAD_FAILED",
+            "printedName": "OFFLINE_LOAD_FAILED",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8PopIMLib0A15IMExceptionTypeV19OFFLINE_LOAD_FAILEDSSvpZ",
+            "mangledName": "$s8PopIMLib0A15IMExceptionTypeV19OFFLINE_LOAD_FAILEDSSvpZ",
+            "moduleName": "PopIMLib",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8PopIMLib0A15IMExceptionTypeV19OFFLINE_LOAD_FAILEDSSvgZ",
+                "mangledName": "$s8PopIMLib0A15IMExceptionTypeV19OFFLINE_LOAD_FAILEDSSvgZ",
+                "moduleName": "PopIMLib",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "GAP_FILL_FAILED",
+            "printedName": "GAP_FILL_FAILED",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8PopIMLib0A15IMExceptionTypeV15GAP_FILL_FAILEDSSvpZ",
+            "mangledName": "$s8PopIMLib0A15IMExceptionTypeV15GAP_FILL_FAILEDSSvpZ",
+            "moduleName": "PopIMLib",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8PopIMLib0A15IMExceptionTypeV15GAP_FILL_FAILEDSSvgZ",
+                "mangledName": "$s8PopIMLib0A15IMExceptionTypeV15GAP_FILL_FAILEDSSvgZ",
+                "moduleName": "PopIMLib",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "MESSAGE_CONTENT_OVERSIZE",
+            "printedName": "MESSAGE_CONTENT_OVERSIZE",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8PopIMLib0A15IMExceptionTypeV24MESSAGE_CONTENT_OVERSIZESSvpZ",
+            "mangledName": "$s8PopIMLib0A15IMExceptionTypeV24MESSAGE_CONTENT_OVERSIZESSvpZ",
+            "moduleName": "PopIMLib",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8PopIMLib0A15IMExceptionTypeV24MESSAGE_CONTENT_OVERSIZESSvgZ",
+                "mangledName": "$s8PopIMLib0A15IMExceptionTypeV24MESSAGE_CONTENT_OVERSIZESSvgZ",
+                "moduleName": "PopIMLib",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "KEYCHAIN_UDID_SAVE_FAILURE",
             "printedName": "KEYCHAIN_UDID_SAVE_FAILURE",
             "children": [
@@ -194920,6 +195064,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SwiftProtobufContiguousBytes",
+            "printedName": "SwiftProtobufContiguousBytes",
+            "usr": "s:18PopIMSwiftProtobuf05SwiftC15ContiguousBytesP",
+            "mangledName": "$s18PopIMSwiftProtobuf05SwiftC15ContiguousBytesP"
+          },
+          {
+            "kind": "Conformance",
             "name": "BidirectionalCollection",
             "printedName": "BidirectionalCollection",
             "children": [
@@ -195341,13 +195492,6 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SwiftProtobufContiguousBytes",
-            "printedName": "SwiftProtobufContiguousBytes",
-            "usr": "s:13SwiftProtobuf0aB15ContiguousBytesP",
-            "mangledName": "$s13SwiftProtobuf0aB15ContiguousBytesP"
           }
         ]
       },
@@ -201061,6 +201205,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SwiftProtobufContiguousBytes",
+            "printedName": "SwiftProtobufContiguousBytes",
+            "usr": "s:18PopIMSwiftProtobuf05SwiftC15ContiguousBytesP",
+            "mangledName": "$s18PopIMSwiftProtobuf05SwiftC15ContiguousBytesP"
+          },
+          {
+            "kind": "Conformance",
             "name": "BidirectionalCollection",
             "printedName": "BidirectionalCollection",
             "children": [
@@ -201620,13 +201771,6 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SwiftProtobufContiguousBytes",
-            "printedName": "SwiftProtobufContiguousBytes",
-            "usr": "s:13SwiftProtobuf0aB15ContiguousBytesP",
-            "mangledName": "$s13SwiftProtobuf0aB15ContiguousBytesP"
           }
         ]
       },
@@ -216034,15 +216178,29 @@
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Public\/PopIMMessageModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2600,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Public\/PopIMMessageModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2730,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Public\/PopIMMessageModel.swift",
       "kind": "StringLiteral",
-      "offset": 2577,
+      "offset": 2845,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Public\/PopIMMessageModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2658,
+      "offset": 2926,
       "length": 1,
       "value": "0"
     },
@@ -217645,14 +217803,14 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase+Conversation.swift",
       "kind": "Array",
-      "offset": 22531,
+      "offset": 23826,
       "length": 102,
       "value": "[\"seq\", \"isTop\", \"type\", \"isDelete\", \"newMessageNum\", \"mentionedCount\", \"autoDeleteDay\", \"updateTime\"]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase+Conversation.swift",
       "kind": "Array",
-      "offset": 22682,
+      "offset": 23977,
       "length": 137,
       "value": "[\"targetId_type_channelId\", \"targetId\", \"channelId\", \"userId\", \"notificationStatus\", \"portraitUrl\", \"targetName\", \"lastMessage\", \"draft\"]"
     },
@@ -218080,20 +218238,20 @@
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/8Tool\/PopIMConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 6628,
-      "length": 4,
-      "value": "1000"
+      "length": 3,
+      "value": "200"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/8Tool\/PopIMConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 6731,
+      "offset": 6730,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/8Tool\/PopIMConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 6892,
+      "offset": 6891,
       "length": 3,
       "value": "100"
     },
@@ -218688,161 +218846,161 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "BooleanLiteral",
-      "offset": 2130,
+      "offset": 2135,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "BooleanLiteral",
-      "offset": 2355,
+      "offset": 2360,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "IntegerLiteral",
-      "offset": 2425,
+      "offset": 2430,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "BooleanLiteral",
-      "offset": 2498,
+      "offset": 2503,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "BooleanLiteral",
-      "offset": 2591,
+      "offset": 2596,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "Array",
-      "offset": 2726,
+      "offset": 2731,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "IntegerLiteral",
-      "offset": 2809,
+      "offset": 2814,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 2940,
+      "offset": 2945,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 3064,
+      "offset": 3069,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "IntegerLiteral",
-      "offset": 3200,
+      "offset": 3205,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 3650,
+      "offset": 3655,
       "length": 22,
       "value": "\"com.popim.mqtt.state\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5703,
+      "offset": 5708,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5739,
+      "offset": 5744,
       "length": 12,
       "value": "\"Connecting\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5776,
+      "offset": 5781,
       "length": 11,
       "value": "\"Connected\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5815,
+      "offset": 5820,
       "length": 14,
       "value": "\"Reconnecting\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5832,
+      "offset": 5837,
       "length": 19,
       "value": "\"Connection failed\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5895,
+      "offset": 5900,
       "length": 15,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 5909,
+      "offset": 5914,
       "length": 17,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "StringLiteral",
-      "offset": 6255,
+      "offset": 6260,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "BooleanLiteral",
-      "offset": 6582,
+      "offset": 6587,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "IntegerLiteral",
-      "offset": 6782,
+      "offset": 6787,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "BooleanLiteral",
-      "offset": 10675,
+      "offset": 10680,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqtt.swift",
       "kind": "IntegerLiteral",
-      "offset": 24942,
+      "offset": 24947,
       "length": 2,
       "value": "32"
     },
@@ -218926,7 +219084,7 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PopIMProtobufParser.swift",
       "kind": "StringLiteral",
-      "offset": 504,
+      "offset": 509,
       "length": 26,
       "value": "\"com.popim.protobuf.parse\""
     },
@@ -218947,77 +219105,77 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase+Message.swift",
       "kind": "StringLiteral",
-      "offset": 26051,
+      "offset": 27751,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase+Message.swift",
       "kind": "StringLiteral",
-      "offset": 32581,
+      "offset": 34281,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase+Message.swift",
       "kind": "BooleanLiteral",
-      "offset": 35474,
+      "offset": 37174,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase+Message.swift",
       "kind": "IntegerLiteral",
-      "offset": 35515,
+      "offset": 37215,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase+Message.swift",
       "kind": "IntegerLiteral",
-      "offset": 40252,
+      "offset": 41952,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase+Message.swift",
       "kind": "StringLiteral",
-      "offset": 45988,
+      "offset": 47688,
       "length": 4,
       "value": "\"\\\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase+Message.swift",
       "kind": "IntegerLiteral",
-      "offset": 51628,
+      "offset": 53328,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase+Message.swift",
       "kind": "StringLiteral",
-      "offset": 58865,
+      "offset": 60565,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase+Message.swift",
       "kind": "StringLiteral",
-      "offset": 76533,
+      "offset": 78233,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase+Message.swift",
       "kind": "IntegerLiteral",
-      "offset": 76555,
+      "offset": 78255,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/4DataBase\/PopIMDataBase+Message.swift",
       "kind": "StringLiteral",
-      "offset": 80299,
+      "offset": 81999,
       "length": 2,
       "value": "\"\""
     },
@@ -221880,343 +222038,343 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 25296,
+      "offset": 25346,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 25680,
+      "offset": 25740,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 26187,
+      "offset": 26257,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 26238,
+      "offset": 26308,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "BooleanLiteral",
-      "offset": 26286,
+      "offset": 26356,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 26367,
+      "offset": 26437,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "Array",
-      "offset": 26963,
+      "offset": 27043,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "Array",
-      "offset": 26998,
+      "offset": 27078,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 27402,
+      "offset": 27492,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 27850,
+      "offset": 27950,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 28329,
+      "offset": 28439,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 28820,
+      "offset": 28940,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 29183,
+      "offset": 29323,
       "length": 9,
       "value": "\"Request\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 29259,
+      "offset": 29404,
       "length": 432,
       "value": "\"\u0000\u0001eventType\u0000\u0001privateLastMsgId\u0000\u0001groupLastMsgId\u0000\u0001systemLastMsgId\u0000\u0001heartBeatPacketId\u0000\u0001pageSize\u0000\u0001message\u0000\u0001historyCustomMsg\u0000\u0001ultraGroupLastMsgId\u0000\u0001tracingId\u0000\u0001androidVersion\u0000\u0001iosVersion\u0000\u0001webVersion\u0000\u0001msgIdList\u0000\u0001extParams\u0000\u0001lostLastMsgId\u0000\u0001privateLastSendTime\u0000\u0001groupLastSendTime\u0000\u0001privateLastSeq\u0000\u0001groupLastSeq\u0000\u0001lastSeq\u0000\u0001currentSeq\u0000\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 29758,
+      "offset": 29903,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "Array",
-      "offset": 30259,
+      "offset": 30404,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 40669,
+      "offset": 40839,
       "length": 10,
       "value": "\"Response\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 40746,
+      "offset": 40921,
       "length": 410,
       "value": "\"\u0000\u0001eventType\u0000\u0001privateLastMsgId\u0000\u0001groupLastMsgId\u0000\u0001systemLastMsgId\u0000\u0001heartBeatPacketId\u0000\u0001pageSize\u0000\u0001errMsg\u0000\u0001messageList\u0000\u0001readUnreadUserList\u0000\u0001sessionLastReadMsgList\u0000\u0001tracingId\u0000\u0001sessionLastClearReadMsgList\u0000\u0001onlinePushCmdDto\u0000\u0001currentServerTime\u0000\u0001code\u0000\u0001executeTime\u0000\u0001unAckMessageIds\u0000\u0001hasMore\u0000\u0001privateMaxSeq\u0000\u0001groupMaxSeq\u0000\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 41223,
+      "offset": 41398,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "Array",
-      "offset": 41484,
+      "offset": 41659,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "Array",
-      "offset": 41601,
+      "offset": 41776,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "Array",
-      "offset": 41707,
+      "offset": 41882,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "Array",
-      "offset": 41903,
+      "offset": 42078,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 51594,
+      "offset": 51794,
       "length": 9,
       "value": "\"Message\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 51670,
+      "offset": 51875,
       "length": 421,
       "value": "\"\u0000\u0001sessionType\u0000\u0001sessionSeq\u0000\u0001targetId\u0000\u0001msgCategory\u0000\u0001msgType\u0000\u0001clientMsgId\u0000\u0001content\u0000\u0001expansion\u0000\u0001extra\u0000\u0001isMentioned\u0000\u0001fromBizUid\u0000\u0001msgId\u0000\u0001toBizUid\u0000\u0001expireTime\u0000\u0001score\u0000\u0001sendTime\u0000\u0001device\u0000\u0001messagePushConfig\u0000\u0001pushSdkLogId\u0000\u0001session\u0000\u0001receiveCount\u0000\u0001readCount\u0000\u0001channelId\u0000\u0001pullOrder\u0000\u0001userSeq\u0000\u0001sessionList\u0000\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 52160,
+      "offset": 52365,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 52268,
+      "offset": 52473,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 52410,
+      "offset": 52615,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 52476,
+      "offset": 52681,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 52651,
+      "offset": 52856,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 52888,
+      "offset": 53093,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "IntegerLiteral",
-      "offset": 52918,
+      "offset": 53123,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "Array",
-      "offset": 53065,
+      "offset": 53270,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 64203,
+      "offset": 64433,
       "length": 11,
       "value": "\"DeviceDto\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 64281,
+      "offset": 64516,
       "length": 90,
       "value": "\"\u0000\u0001os\u0000\u0001platform\u0000\u0001device\u0000\u0001packageName\u0000\u0001fid\u0000\u0001pushPermission\u0000\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 66758,
+      "offset": 67018,
       "length": 22,
       "value": "\"MessagePushConfigDto\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 66847,
+      "offset": 67112,
       "length": 66,
       "value": "\"\u0000\u0001enable\u0000\u0001pushTitle\u0000\u0001pushContent\u0000\u0001pushData\u0000\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 68832,
+      "offset": 69122,
       "length": 12,
       "value": "\"SessionDto\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 68911,
+      "offset": 69206,
       "length": 149,
       "value": "\"\u0000\u0001targetId\u0000\u0001sessionType\u0000\u0001autoDeleteDay\u0000\u0001isTop\u0000\u0001notifyStatus\u0000\u0001lastReadMsgId\u0000\u0001channelId\u0000\u0001lastClearReadMsgId\u0000\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 72086,
+      "offset": 72406,
       "length": 20,
       "value": "\"ReadUnreadUserList\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 72173,
+      "offset": 72498,
       "length": 44,
       "value": "\"\u0000\u0001unreadUserList\u0000\u0001readUserList\u0000\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 73679,
+      "offset": 74029,
       "length": 23,
       "value": "\"SessionLastReadMsgDto\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 73769,
+      "offset": 74124,
       "length": 57,
       "value": "\"\u0000\u0001targetId\u0000\u0001sessionType\u0000\u0001lastReadMsgId\u0000\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 75538,
+      "offset": 75918,
       "length": 28,
       "value": "\"SessionLastClearReadMsgDto\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 75633,
+      "offset": 76018,
       "length": 78,
       "value": "\"\u0000\u0001targetId\u0000\u0001sessionType\u0000\u0001channelId\u0000\u0001lastClearReadMsgId\u0000\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 77711,
+      "offset": 78121,
       "length": 21,
       "value": "\"HistoryCustomMsgDto\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 77799,
+      "offset": 78214,
       "length": 84,
       "value": "\"\u0000\u0001targetId\u0000\u0001sessionType\u0000\u0001dataTime\u0000\u0001pullOrder\u0000\u0001channelId\u0000\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 80076,
+      "offset": 80516,
       "length": 18,
       "value": "\"OnlinePushCmdDto\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/7Model\/PublishEvent.pb.swift",
       "kind": "StringLiteral",
-      "offset": 80161,
+      "offset": 80606,
       "length": 40,
       "value": "\"\u0000\u0001operationType\u0000\u0001operation\u0000\""
     },
@@ -222715,7 +222873,7 @@
       "kind": "StringLiteral",
       "offset": 347,
       "length": 14,
-      "value": "\"202611161700\""
+      "value": "\"202611181430\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCoreClient.swift",
@@ -222818,14 +222976,14 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCoreClient+Message.swift",
       "kind": "IntegerLiteral",
-      "offset": 20156,
+      "offset": 21076,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCoreClient+Message.swift",
       "kind": "StringLiteral",
-      "offset": 25532,
+      "offset": 26452,
       "length": 2,
       "value": "\"\""
     },
@@ -223308,357 +223466,357 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 49081,
+      "offset": 49071,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 49141,
+      "offset": 49131,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 49197,
+      "offset": 49187,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 49250,
+      "offset": 49240,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 71045,
+      "offset": 71035,
       "length": 6,
       "value": "\"data\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 71150,
+      "offset": 71140,
       "length": 10,
       "value": "\"targetId\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 71176,
+      "offset": 71166,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 71214,
+      "offset": 71204,
       "length": 13,
       "value": "\"sessionType\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 71240,
+      "offset": 71230,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 71271,
+      "offset": 71261,
       "length": 7,
       "value": "\"isTop\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 71292,
+      "offset": 71282,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 71334,
+      "offset": 71324,
       "length": 14,
       "value": "\"notifyStatus\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 71361,
+      "offset": 71351,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 71397,
+      "offset": 71387,
       "length": 12,
       "value": "\"updateTime\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 71693,
+      "offset": 71683,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 71719,
+      "offset": 71709,
       "length": 41,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 71731,
+      "offset": 71721,
       "length": 1,
       "value": "\"_\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 71746,
+      "offset": 71736,
       "length": 1,
       "value": "\"_\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 71759,
+      "offset": 71749,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 72290,
+      "offset": 72280,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 72460,
+      "offset": 72450,
       "length": 123,
       "value": "\"handleSessionChangeNtf: all \""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 72506,
+      "offset": 72496,
       "length": 5,
       "value": "\" items filtered out (updateTime <= settingsSyncMaxUpdateTime=\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 72581,
+      "offset": 72571,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 72739,
+      "offset": 72729,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "Array",
-      "offset": 72961,
+      "offset": 72951,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 73153,
+      "offset": 73143,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 73307,
+      "offset": 73297,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 73628,
+      "offset": 73618,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 73649,
+      "offset": 73639,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 73818,
+      "offset": 73808,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 74022,
+      "offset": 74012,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 74530,
+      "offset": 74520,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 74618,
+      "offset": 74608,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 74693,
+      "offset": 74683,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 74701,
+      "offset": 74691,
       "length": 21,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 74721,
+      "offset": 74711,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 74748,
+      "offset": 74738,
       "length": 10,
       "value": "\"targetId\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 74799,
+      "offset": 74789,
       "length": 11,
       "value": "\"channelId\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 74852,
+      "offset": 74842,
       "length": 7,
       "value": "\"isTop\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 74897,
+      "offset": 74887,
       "length": 20,
       "value": "\"notificationStatus\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 74919,
+      "offset": 74909,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 74940,
+      "offset": 74930,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 74967,
+      "offset": 74957,
       "length": 12,
       "value": "\"updateTime\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 75361,
+      "offset": 75351,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 75716,
+      "offset": 75706,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 76208,
+      "offset": 76198,
       "length": 128,
       "value": "\"handleSessionChangeNtf: key=\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 76248,
+      "offset": 76238,
       "length": 1,
       "value": "\", isTop=\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 76269,
+      "offset": 76259,
       "length": 1,
       "value": "\", notifyStatus=\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 76304,
+      "offset": 76294,
       "length": 1,
       "value": "\", updateTime=\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "StringLiteral",
-      "offset": 76335,
+      "offset": 76325,
       "length": 16,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/2Conversation\/PopIMConversationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 76760,
+      "offset": 76750,
       "length": 1,
       "value": "1"
     },
@@ -225870,28 +226028,28 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqttMessageTracker.swift",
       "kind": "Dictionary",
-      "offset": 618,
+      "offset": 623,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqttMessageTracker.swift",
       "kind": "StringLiteral",
-      "offset": 848,
+      "offset": 853,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqttMessageTracker.swift",
       "kind": "Dictionary",
-      "offset": 1067,
+      "offset": 1072,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/6Socket\/PopIMMqttMessageTracker.swift",
       "kind": "IntegerLiteral",
-      "offset": 1188,
+      "offset": 1193,
       "length": 4,
       "value": "1000"
     },
@@ -231582,70 +231740,119 @@
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
       "kind": "StringLiteral",
-      "offset": 2607,
+      "offset": 2597,
+      "length": 21,
+      "value": "\"OFFLINE_LOAD_FAILED\""
+    },
+    {
+      "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
+      "kind": "StringLiteral",
+      "offset": 2720,
+      "length": 17,
+      "value": "\"GAP_FILL_FAILED\""
+    },
+    {
+      "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
+      "kind": "StringLiteral",
+      "offset": 2835,
+      "length": 26,
+      "value": "\"MESSAGE_CONTENT_OVERSIZE\""
+    },
+    {
+      "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
+      "kind": "StringLiteral",
+      "offset": 2991,
       "length": 28,
       "value": "\"KEYCHAIN_UDID_SAVE_FAILURE\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
       "kind": "StringLiteral",
-      "offset": 2720,
+      "offset": 3104,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
       "kind": "Dictionary",
-      "offset": 4284,
+      "offset": 4337,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6374,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6379,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6384,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
+      "kind": "Dictionary",
+      "offset": 10368,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
       "kind": "StringLiteral",
-      "offset": 4496,
+      "offset": 10580,
       "length": 24,
       "value": "\"com.popim.crash.upload\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
       "kind": "BooleanLiteral",
-      "offset": 4599,
+      "offset": 10683,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
       "kind": "Array",
-      "offset": 4716,
+      "offset": 10800,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
       "kind": "StringLiteral",
-      "offset": 4904,
+      "offset": 10988,
       "length": 30,
       "value": "\"PopIMCrashUploadedTimestamps\""
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
       "kind": "Array",
-      "offset": 13172,
+      "offset": 19256,
       "length": 169,
       "value": "[\"libc++\", \"libobjc\", \"libsystem\", \"libdispatch\", \"libswiftCore\", \"libswift\", \"CoreFoundation\", \"Foundation\", \"UIKit\", \"UIKitCore\", \"??? \"]"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
       "kind": "BooleanLiteral",
-      "offset": 15685,
+      "offset": 21769,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/builds\/gSFghXJKB\/0\/im-services\/im-sdk-ios\/PopIMLib\/Private\/1common\/PopIMCrashUploader.swift",
       "kind": "StringLiteral",
-      "offset": 32582,
+      "offset": 38666,
       "length": 2,
       "value": "\"\""
     },
